@@ -1,0 +1,30 @@
+base/Const.py 存储项目相关内容（版本号等）
+base/Logger.py 使用logging处理日志，保存于output/logs
+base/FileManager.py 处理生成的文件应存放在哪里
+base/AppConfig.py 加载 config.toml，设置与整个应用相关的配置
+base/AssetsManager 处理 assets/{binary,copyright,image} 中的资源获取、运行，必要时下载资源
+base/I18n 多语言支持，从assets/i18n获取
+base/ConfigManager 用于在运行时记录当前配置
+base/ProcessManager 用于隔离单次运行
+
+chat/chatter/{Chatter,Group,Friend} 用于区分聊天对象是私聊还是群聊
+chat/message/{Message,Text} 抽象出消息类型
+
+features/FeatureManager 记录所有feature，并暴露所需的传入参数以供ConfigManager查询 ref: https://stackoverflow.com/a/60861023
+features/Dumper/DB/QQ/Android/MIUIbackup.py 用于为特定平台获取相关内容，可以是静态读文件，也可以是用adb+Frida等自动提取；设置is_decrypted等参数于ProcessManager以在后面按需选择适当步骤
+features/Dumper/key/QQ/Android
+features/Dumper/assets/QQ/Android
+features/Decrypter：解密数据库
+features/Decoder：将silk转为MP3音频，可选ffmpeg/pyav等
+以上部分输出到output/stage中
+features/Converter：解析为Chatter与Message对象，随后转换为plaintext SQLite/Shmily/none/HTML/PDF/WechatMsg/Excel
+features/Analyzer：词云等没啥用的东西
+以上部分输出到output/result/{format or analyzer}中
+
+tests/{xxx,example/}
+
+顶层：GUI / CLI / Code / WebUI(Flask+API docs) 四个入口
+
+
+前端：Vue
+可能用Go+WASM也重写一份 并且取个名字

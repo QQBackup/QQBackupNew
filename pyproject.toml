@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "qqbackup"
+version = "0.0.1"
+description = "QQBackup 再次重构"
+authors = ["LY"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+rsa = { version = "^4.9", optional = true }
+
+[tool.poetry.extras]
+encrypt_submit_data = ["rsa"]
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
