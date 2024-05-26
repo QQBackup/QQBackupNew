@@ -1,4 +1,8 @@
 # chat/message/Message.py
-class Message:
-    def __init__(self, content):
-        self.content = content
+from abc import ABC, abstractmethod
+
+
+class Message(ABC):
+    @abstractmethod
+    def as_text(self) -> str:
+        pass

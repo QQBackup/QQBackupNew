@@ -1,4 +1,3 @@
-# base/AppConfig.py
 import tomllib
 
 

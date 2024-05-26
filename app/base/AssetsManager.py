@@ -1,4 +1,3 @@
-# base/AssetsManager.py
 class AssetsManager:
     def __init__(self):
         self.assets_dir = "assets"
