@@ -18,6 +18,8 @@ features/Dumper/assets/QQ/Android
 features/Converter：解密数据库；将silk转为MP3音频，可选ffmpeg/pyav等；将图片等资源重命名、复制到相关位置；解析为Chatter与Message对象，随后转换为plaintext SQLite/Shmily/none/HTML/PDF/WechatMsg/Excel，或者是词云等没啥用的东西
 以上部分输出到output/result/{format or analyzer}中
 
+这些feature是可以连续组合的，也就是说可以有多个Exporter，并且需要一些处理使得只在最后一个exporter时统一导出，前面都只执行add_exporter
+
 tests/{xxx,example/}
 
 顶层：GUI / CLI / Code / WebUI(Flask+API docs) 四个入口
