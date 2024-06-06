@@ -14,6 +14,7 @@ features/FeatureManager 记录所有feature，并暴露所需的传入参数以�
 features/Dumper/DB/QQ/Android/MIUIbackup.py 用于为特定平台获取相关内容，可以是静态读文件，也可以是用adb+Frida等自动提取；设置is_decrypted等参数于ProcessManager以在后面按需选择适当步骤
 features/Dumper/key/QQ/Android
 features/Dumper/assets/QQ/Android
+打算实现的平台： https://koishi.chat/zh-CN/manual/usage/adapter.html#%E6%8E%A5%E5%85%A5%E7%9C%9F%E5%AE%9E%E8%81%8A%E5%A4%A9%E5%B9%B3%E5%8F%B0
 以上部分输出到output/stage中
 features/Converter：解密数据库；将silk转为MP3音频，可选ffmpeg/pyav等；将图片等资源重命名、复制到相关位置；解析为Chatter与Message对象，随后转换为plaintext SQLite/Shmily/none/HTML/PDF/WechatMsg/Excel，或者是词云等没啥用的东西
 以上部分输出到output/result/{format or analyzer}中
