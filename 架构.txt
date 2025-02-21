@@ -26,5 +26,7 @@ tests/{xxx,example/}
 顶层：GUI / CLI / Code / WebUI(Flask+API docs) 四个入口
 
 
-前端：Vue
+前端：Vue/React?
 可能用Go+WASM也重写一份 并且取个名字
+
+也许Typst生成PDF
